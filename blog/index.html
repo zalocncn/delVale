@@ -7,53 +7,71 @@
     <meta name="description" content="Artículos sobre salud, telemedicina y bienestar. Consejos y novedades de Delvir.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://delvir.co/blog/">
-    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
     <style>
         html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #F6F7FC; }
         ::-webkit-scrollbar-thumb { background: #C7C9D9; border-radius: 99px; }
         ::-webkit-scrollbar-thumb:hover { background: #9AA0B2; }
+        #mobile-menu.open { display: block !important; }
+        @media (min-width: 768px) { #mobile-menu { display: none !important; } }
     </style>
 </head>
 <body class="bg-[#F6F7FC] text-[#14151A] overflow-x-hidden">
 
-    <!-- Navbar -->
+    <!-- Navbar (matches home) -->
     <nav class="fixed w-full z-50 top-0 left-0 bg-white/80 backdrop-blur-md border-b border-[rgba(20,21,26,0.06)]">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="../index.html" class="text-2xl font-semibold tracking-tighter text-[#14151A]">
+            <a href="/" class="text-2xl font-semibold tracking-tighter text-[#14151A] flex items-center gap-2 group">
                 <span class="tracking-widest">DELVIR</span>
             </a>
             <div class="hidden md:flex items-center gap-8">
-                <a href="../how-it-works.html" class="text-sm text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Cómo funciona</a>
-                <a href="../faq.html" class="text-sm text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Preguntas frecuentes</a>
-                <a href="../blog/" class="text-sm text-[#6C6BFF] font-medium">Blog</a>
-                <a href="../index.html#precio" class="h-10 px-6 rounded-full bg-[#6C6BFF] hover:bg-[#5757E6] text-white text-sm font-medium transition-all shadow-[0_6px_16px_0px_rgba(20,21,26,0.08)] inline-flex items-center justify-center">
+                <a href="/how-it-works.html" class="text-sm font-normal text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Cómo funciona</a>
+                <a href="/faq.html" class="text-sm font-normal text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Preguntas frecuentes</a>
+                <a href="/blog/" class="text-sm font-medium text-[#6C6BFF]">Blog</a>
+                <a href="/#precio" class="h-10 px-6 rounded-full bg-[#6C6BFF] hover:bg-[#5757E6] text-white text-sm font-medium transition-all duration-300 shadow-[0_6px_16px_0px_rgba(20,21,26,0.08)] hover:shadow-[0_10px_28px_0px_rgba(20,21,26,0.15)] hover:-translate-y-0.5 inline-flex items-center justify-center">
                     Comenzar
                 </a>
             </div>
-            <button class="md:hidden text-[#14151A]">
+            <button type="button" id="mobile-menu-btn" class="md:hidden text-[#14151A] p-2 -mr-2" aria-label="Abrir menú">
                 <iconify-icon icon="solar:hamburger-menu-linear" width="24" height="24"></iconify-icon>
             </button>
         </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 w-full z-50 bg-white border-b border-[rgba(20,21,26,0.06)] shadow-lg">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-1">
+                <a href="/how-it-works.html" class="py-3 text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Cómo funciona</a>
+                <a href="/faq.html" class="py-3 text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Preguntas frecuentes</a>
+                <a href="/blog/" class="py-3 text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Blog</a>
+                <a href="/#precio" class="py-3 inline-flex items-center justify-center h-10 px-6 rounded-full bg-[#6C6BFF] text-white text-sm font-medium w-fit">Comenzar</a>
+            </div>
+        </div>
     </nav>
+    <script>
+    (function(){var btn=document.getElementById('mobile-menu-btn');var menu=document.getElementById('mobile-menu');if(!btn||!menu)return;function toggleMenu(){menu.classList.toggle('open');menu.classList.toggle('hidden');btn.setAttribute('aria-expanded',menu.classList.contains('open'));}btn.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();toggleMenu();});document.addEventListener('click',function(e){if(menu.classList.contains('open')&&!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.add('hidden');menu.classList.remove('open');btn.setAttribute('aria-expanded','false');}});})();
+    </script>
 
-    <!-- Hero -->
-    <header class="pt-32 pb-16 md:pt-40 md:pb-24 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(108,107,255,0.12)_0%,transparent_55%)] pointer-events-none"></div>
-        <div class="max-w-7xl mx-auto px-6 relative">
+    <!-- Hero (matches home gradient + pill style) -->
+    <header class="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
+        <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(108,107,255,0.16)_0%,rgba(255,255,255,0.0)_55%)] pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="max-w-2xl">
-                <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E0E7FF] border border-[#C7D2FE] mb-6">
-                    <span class="text-xs font-medium text-[#5757E6]">Blog</span>
-                </span>
-                <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-[#14151A] leading-tight">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E0E7FF] border border-[#C7D2FE] mb-6">
+                    <span class="flex h-2 w-2 rounded-full bg-[#6C6BFF]"></span>
+                    <span class="text-xs font-medium text-[#5757E6] tracking-tight">Blog</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-semibold tracking-tighter leading-[1.15] text-[#14151A]">
                     Salud y <span class="text-[#6C6BFF]">telemedicina</span>
                 </h1>
-                <p class="mt-4 text-lg text-[#4A4E5C]">
+                <p class="mt-4 text-lg text-[#4A4E5C] leading-relaxed">
                     Consejos, novedades y contenido sobre atención médica en línea en Perú.
                 </p>
             </div>
@@ -277,7 +295,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 mb-16">
                 <div class="col-span-2 lg:col-span-2 pr-10">
-                    <a href="../index.html" class="text-2xl font-semibold tracking-tighter text-white mb-6 block">DELVIR</a>
+                    <a href="/" class="text-2xl font-semibold tracking-tighter text-white mb-6 block">DELVIR</a>
                     <p class="text-[#9AA0B2] text-sm leading-relaxed mb-6">
                         Consultas de medicina general en línea con médicos verificados.
                     </p>
@@ -296,9 +314,9 @@
                 <div>
                     <h4 class="text-sm font-semibold mb-4 text-white">Legal</h4>
                     <ul class="space-y-3 text-[#9AA0B2] text-sm">
-                        <li><a href="../contact.html" class="hover:text-white transition-colors">Contáctanos</a></li>
-                        <li><a href="../terms.html" class="hover:text-white transition-colors">Términos y condiciones</a></li>
-                        <li><a href="../privacy.html" class="hover:text-white transition-colors">Política de privacidad</a></li>
+                        <li><a href="/contact.html" class="hover:text-white transition-colors">Contáctanos</a></li>
+                        <li><a href="/terms.html" class="hover:text-white transition-colors">Términos y condiciones</a></li>
+                        <li><a href="/privacy.html" class="hover:text-white transition-colors">Política de privacidad</a></li>
                     </ul>
                 </div>
             </div>
