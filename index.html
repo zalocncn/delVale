@@ -63,6 +63,13 @@
             border: 0;
             border-radius: 18px;
         }
+        /* Mobile menu: visible when open; always hidden on desktop */
+        #mobile-menu.open {
+            display: block !important;
+        }
+        @media (min-width: 768px) {
+            #mobile-menu { display: none !important; }
+        }
     </style>
 </head>
 <body class="bg-[#F6F7FC] text-[#14151A] overflow-x-hidden">
@@ -79,18 +86,51 @@
             <div class="hidden md:flex items-center gap-8">
                 <a href="how-it-works.html" class="text-sm font-normal text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Cómo funciona</a>
                 <a href="faq.html" class="text-sm font-normal text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Preguntas frecuentes</a>
-                <a href="blog/" class="text-sm font-normal text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Blog</a>
+                <a href="blog/index.html" class="text-sm font-normal text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Blog</a>
                 <a href="#precio" class="h-10 px-6 rounded-full bg-[#6C6BFF] hover:bg-[#5757E6] text-white text-sm font-medium transition-all duration-300 shadow-[0_6px_16px_0px_rgba(20,21,26,0.08)] hover:shadow-[0_10px_28px_0px_rgba(20,21,26,0.15)] hover:-translate-y-0.5 inline-flex items-center justify-center">
                     Comenzar
                 </a>
             </div>
 
             <!-- Mobile Menu -->
-            <button class="md:hidden text-[#14151A]">
+            <button type="button" id="mobile-menu-btn" class="md:hidden text-[#14151A] p-2 -mr-2" aria-label="Abrir menú">
                 <iconify-icon icon="solar:hamburger-menu-linear" width="24" height="24"></iconify-icon>
             </button>
         </div>
+        <!-- Mobile dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 w-full z-50 bg-white border-b border-[rgba(20,21,26,0.06)] shadow-lg">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-1">
+                <a href="how-it-works.html" class="py-3 text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Cómo funciona</a>
+                <a href="faq.html" class="py-3 text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Preguntas frecuentes</a>
+                <a href="blog/index.html" class="py-3 text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Blog</a>
+                <a href="#precio" class="py-3 inline-flex items-center justify-center h-10 px-6 rounded-full bg-[#6C6BFF] text-white text-sm font-medium w-fit">Comenzar</a>
+            </div>
+        </div>
     </nav>
+    <script>
+        (function() {
+            var btn = document.getElementById('mobile-menu-btn');
+            var menu = document.getElementById('mobile-menu');
+            if (!btn || !menu) return;
+            function toggleMenu() {
+                menu.classList.toggle('open');
+                menu.classList.toggle('hidden');
+                btn.setAttribute('aria-expanded', menu.classList.contains('open'));
+            }
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleMenu();
+            });
+            document.addEventListener('click', function(e) {
+                if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
+                    menu.classList.add('hidden');
+                    menu.classList.remove('open');
+                    btn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        })();
+    </script>
 
     <!-- Hero Section -->
     <header class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
