@@ -66,14 +66,14 @@
     <script>
     (function(){var btn=document.getElementById('mobile-menu-btn');var menu=document.getElementById('mobile-menu');if(!btn||!menu)return;function toggleMenu(){menu.classList.toggle('open');menu.classList.toggle('hidden');btn.setAttribute('aria-expanded',menu.classList.contains('open'));}btn.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();toggleMenu();});document.addEventListener('click',function(e){if(menu.classList.contains('open')&&!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.add('hidden');menu.classList.remove('open');btn.setAttribute('aria-expanded','false');}});})();
     </script>
-    <header class="pt-32 pb-12 md:pt-40 md:pb-16 bg-white">
+    <header class="pt-32 pb-16 md:pt-40 md:pb-20 bg-white">
         <div class="max-w-4xl mx-auto px-6">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E0E7FF] border border-[#C7D2FE] mb-6">
                 <iconify-icon icon="solar:health-linear" class="text-[#6C6BFF]" width="14"></iconify-icon>
                 <span class="text-xs font-medium text-[#5757E6]">Guía de salud</span>
             </div>
             
-            <h1 class="text-4xl md:text-5xl font-semibold tracking-tight leading-tight mb-6">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight mb-6 text-[#14151A]">
                 Consulta Médica Online vs Presencial: ¿Cuál Elegir en 2026?
             </h1>
             
@@ -112,7 +112,7 @@
                                 <li>✓ Síntomas comunes (resfríos, fiebre)</li>
                                 <li>✓ Dudas sobre medicamentos</li>
                                 <li>✓ Renovación de recetas</li>
-                                <li>✓ Seguimiento de tratamientos</li>
+                                <li>✓ Seguimiento de manejos</li>
                                 <li>✓ Orientación preventiva</li>
                             </ul>
                         </div>
@@ -302,7 +302,7 @@
                         <div class="p-6 bg-[#F6F7FC] rounded-xl">
                             <h4 class="font-semibold text-[#14151A] mb-2">Caso 1: "Tengo fiebre de 38°C y dolor de garganta desde ayer"</h4>
                             <p class="text-sm text-[#4A4E5C] mb-2">✅ <strong>Consulta Online</strong></p>
-                            <p class="text-sm text-[#4A4E5C]">Síntomas típicos de infección respiratoria. El médico puede diagnosticar por videollamada y recetar tratamiento.</p>
+                            <p class="text-sm text-[#4A4E5C]">Síntomas típicos de infección respiratoria. El médico puede diagnosticar por videollamada y recetar manejo.</p>
                         </div>
 
                         <div class="p-6 bg-[#F6F7FC] rounded-xl">
@@ -486,7 +486,7 @@
           "name": "¿Cuándo debo elegir consulta médica online?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "La consulta online es ideal para síntomas comunes como resfríos, gripe, fiebre leve, problemas digestivos, seguimiento de tratamientos crónicos, renovación de recetas y orientación médica general. Es conveniente, rápida y más económica que la consulta presencial."
+            "text": "La consulta online es ideal para síntomas comunes como resfríos, gripe, fiebre leve, problemas digestivos, seguimiento de manejos crónicos, renovación de recetas y orientación médica general. Es conveniente, rápida y más económica que la consulta presencial."
           }
         },
         {

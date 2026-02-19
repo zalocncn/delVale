@@ -58,12 +58,12 @@
     <script>
     (function(){var btn=document.getElementById('mobile-menu-btn');var menu=document.getElementById('mobile-menu');if(!btn||!menu)return;function toggleMenu(){menu.classList.toggle('open');menu.classList.toggle('hidden');btn.setAttribute('aria-expanded',menu.classList.contains('open'));}btn.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();toggleMenu();});document.addEventListener('click',function(e){if(menu.classList.contains('open')&&!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.add('hidden');menu.classList.remove('open');btn.setAttribute('aria-expanded','false');}});})();
     </script>
-    <header class="pt-32 pb-12 md:pt-40 bg-white">
+    <header class="pt-32 pb-16 md:pt-40 md:pb-20 bg-white">
         <div class="max-w-4xl mx-auto px-6">
-            <h1 class="text-4xl md:text-5xl font-semibold mb-6">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight mb-6 text-[#14151A]">
                 ¿Cuánto Cuesta una Consulta Médica Online en Perú?
             </h1>
-            <p class="text-xl text-[#4A4E5C]">
+            <p class="text-xl text-[#4A4E5C] leading-relaxed">
                 Descubre los precios reales, compara opciones y aprende cómo ahorrar hasta S/200 por consulta médica.
             </p>
         </div>
@@ -156,7 +156,7 @@
                         <li>✓ Consulta completa con médico general (15-30 minutos)</li>
                         <li>✓ Diagnóstico profesional</li>
                         <li>✓ Receta médica digital válida (si es necesaria)</li>
-                        <li>✓ Recomendaciones de tratamiento</li>
+                        <li>✓ Recomendaciones de manejo</li>
                         <li>✓ Opción de video o llamada telefónica</li>
                         <li>✓ Atención desde cualquier lugar del Perú</li>
                     </ul>

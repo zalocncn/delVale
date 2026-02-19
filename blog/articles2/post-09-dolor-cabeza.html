@@ -4,26 +4,54 @@
     <meta charset="UTF-8">
     <title>Dolor de Cabeza: Cuándo Consultar un Médico Online | Delvir</title>
     <meta name="description" content="Guía sobre dolores de cabeza: tipos, cuándo consultar online y señales de alarma. Incluye migrañas y cefaleas tensionales.">
-    <link rel="icon" href="../favicon.svg">
+    <link rel="icon" href="../../favicon.svg">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>body{font-family:'Inter',sans-serif;}</style>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>html{scroll-behavior:smooth;}body{font-family:'Inter',sans-serif;}
+        #mobile-menu.open { display: block !important; }
+        @media (min-width: 768px) { #mobile-menu { display: none !important; } }
+</style>
 </head>
-<body class="bg-[#F6F7FC]">
-    <nav class="fixed w-full z-50 top-0 bg-white/80 backdrop-blur-md border-b">
+<body class="bg-[#F6F7FC] overflow-x-hidden">
+    <nav class="fixed w-full z-50 top-0 left-0 bg-white/80 backdrop-blur-md border-b border-[rgba(20,21,26,0.06)]">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="../index.html" class="text-2xl font-semibold">DELVIR</a>
-            <a href="../../index.html#precio" class="h-10 px-6 rounded-full bg-[#6C6BFF] text-white text-sm">Agendar</a>
+            <a href="../../index.html" class="text-2xl font-semibold tracking-tighter text-[#14151A] flex items-center gap-2 group">
+                <span class="tracking-widest">DELVIR</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="../../how-it-works.html" class="text-sm font-normal text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Cómo funciona</a>
+                <a href="../../faq.html" class="text-sm font-normal text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Preguntas frecuentes</a>
+                <a href="/blog/" class="text-sm font-normal text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Blog</a>
+                <a href="../../index.html#precio" class="h-10 px-6 rounded-full bg-[#6C6BFF] hover:bg-[#5757E6] text-white text-sm font-medium transition-all duration-300 shadow-[0_6px_16px_0px_rgba(20,21,26,0.08)] hover:shadow-[0_10px_28px_0px_rgba(20,21,26,0.15)] hover:-translate-y-0.5 inline-flex items-center justify-center">
+                    Comenzar
+                </a>
+            </div>
+            <button type="button" id="mobile-menu-btn" class="md:hidden text-[#14151A] p-2 -mr-2" aria-label="Abrir menú">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="24" height="24"></iconify-icon>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 w-full z-50 bg-white border-b border-[rgba(20,21,26,0.06)] shadow-lg">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-1">
+                <a href="../../how-it-works.html" class="py-3 text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Cómo funciona</a>
+                <a href="../../faq.html" class="py-3 text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Preguntas frecuentes</a>
+                <a href="/blog/" class="py-3 text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Blog</a>
+                <a href="../../index.html#precio" class="py-3 inline-flex items-center justify-center h-10 px-6 rounded-full bg-[#6C6BFF] text-white text-sm font-medium w-fit">Comenzar</a>
+            </div>
         </div>
     </nav>
-    <header class="pt-32 pb-12 bg-white">
+    <script>
+    (function(){var btn=document.getElementById('mobile-menu-btn');var menu=document.getElementById('mobile-menu');if(!btn||!menu)return;function toggleMenu(){menu.classList.toggle('open');menu.classList.toggle('hidden');btn.setAttribute('aria-expanded',menu.classList.contains('open'));}btn.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();toggleMenu();});document.addEventListener('click',function(e){if(menu.classList.contains('open')&&!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.add('hidden');menu.classList.remove('open');btn.setAttribute('aria-expanded','false');}});})();
+    </script>
+    <header class="pt-32 pb-16 md:pt-40 md:pb-20 bg-white">
         <div class="max-w-4xl mx-auto px-6">
             <h1 class="text-4xl font-semibold mb-4">Dolor de Cabeza: Guía Completa para Saber Cuándo Consultar</h1>
         </div>
     </header>
-    <article class="py-12">
+    <article class="py-16 bg-[#F6F7FC]">
         <div class="max-w-4xl mx-auto px-6">
-            <div class="bg-white rounded-2xl p-8">
-                <h2 class="text-2xl font-semibold mb-4">Tipos de Dolor de Cabeza</h2>
+            <div class="bg-white rounded-2xl p-8 md:p-12 shadow-sm">
+                <h2 class="text-3xl font-semibold tracking-tight text-[#14151A] mb-6">Tipos de Dolor de Cabeza</h2>
                 <p class="mb-6">El 95% de dolores de cabeza son primarios (migrañas, tensionales) y se pueden consultar online.</p>
                 
                 <h3 class="text-xl font-semibold mb-3">Cefalea Tensional:</h3>
@@ -48,7 +76,7 @@
                     <a href="../../index.html#precio" class="text-[#6C6BFF] font-medium">Consultar ahora →</a>
                 </div>
 
-                <h2 class="text-2xl font-semibold mb-4">Señales de Alarma - Ve a Emergencias</h2>
+                <h2 class="text-3xl font-semibold tracking-tight text-[#14151A] mb-6">Señales de Alarma - Ve a Emergencias</h2>
                 <div class="p-6 bg-red-50 border-l-4 border-red-500 mb-6">
                     <ul class="space-y-2 text-sm text-red-700">
                         <li>• "El peor dolor de cabeza de tu vida" (súbito e intenso)</li>
@@ -60,7 +88,7 @@
                     </ul>
                 </div>
 
-                <h2 class="text-2xl font-semibold mb-4">Tratamiento</h2>
+                <h2 class="text-3xl font-semibold tracking-tight text-[#14151A] mb-6">Manejo</h2>
                 <h3 class="text-xl font-semibold mb-3">Medicamentos:</h3>
                 <ul class="mb-6 space-y-2">
                     <li><strong>Analgésicos simples:</strong> Paracetamol, ibuprofeno</li>
@@ -79,11 +107,11 @@
 
                 <div class="my-10 p-8 bg-[#14151A] rounded-2xl text-white">
                     <h3 class="text-2xl font-semibold mb-3">¿Dolor de cabeza frecuente?</h3>
-                    <p class="text-white/80 mb-6">Consulta con un médico para tratamiento preventivo y mejorar tu calidad de vida.</p>
+                    <p class="text-white/80 mb-6">Consulta con un médico para manejo preventivo y mejorar tu calidad de vida.</p>
                     <a href="../../index.html#precio" class="inline-flex items-center gap-2 px-8 py-3 bg-[#6C6BFF] rounded-full">Consultar desde S/80</a>
                 </div>
 
-                <h2 class="text-2xl font-semibold mb-4">Prevención</h2>
+                <h2 class="text-3xl font-semibold tracking-tight text-[#14151A] mb-6">Prevención</h2>
                 <ul class="mb-6 space-y-2">
                     <li>• Duerme 7-8 horas diarias</li>
                     <li>• Evita ayunos prolongados</li>
@@ -98,9 +126,43 @@
             </div>
         </div>
     </article>
-    <footer class="bg-[#15161A] pt-16 pb-10 text-white text-center">
-        <a href="../index.html" class="text-2xl font-semibold block">DELVIR</a>
-        <p class="text-xs text-[#74798C]">© 2026 Delvir</p>
+    <footer class="bg-[#15161A] pt-20 pb-10 text-white border-t border-[rgba(255,255,255,0.05)]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 mb-16">
+                <div class="col-span-2 lg:col-span-2 pr-10">
+                    <a href="../../index.html" class="text-2xl font-semibold tracking-tighter text-white mb-6 block">DELVIR</a>
+                    <p class="text-[#9AA0B2] text-sm leading-relaxed mb-6">
+                        Consultas de medicina general en línea con médicos verificados.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center hover:bg-[rgba(255,255,255,0.1)] transition-colors text-white">
+                            <iconify-icon icon="solar:brand-instagram-linear" width="20"></iconify-icon>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center hover:bg-[rgba(255,255,255,0.1)] transition-colors text-white">
+                            <iconify-icon icon="solar:brand-twitter-linear" width="20"></iconify-icon>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center hover:bg-[rgba(255,255,255,0.1)] transition-colors text-white">
+                            <iconify-icon icon="solar:brand-facebook-linear" width="20"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold mb-4 text-white">Legal</h4>
+                    <ul class="space-y-3 text-[#9AA0B2] text-sm">
+                        <li><a href="../../contact.html" class="hover:text-white transition-colors">Contáctanos</a></li>
+                        <li><a href="../../terms.html" class="hover:text-white transition-colors">Términos y condiciones</a></li>
+                        <li><a href="../../privacy.html" class="hover:text-white transition-colors">Política de privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-[rgba(255,255,255,0.1)] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-[#74798C]">© 2026 Delvir Limited Liability Co. Todos los derechos reservados.</p>
+                <div class="flex gap-2">
+                    <iconify-icon icon="solar:lock-keyhole-linear" class="text-[#9AA0B2]" width="16"></iconify-icon>
+                    <span class="text-xs text-[#9AA0B2]">SSL seguro de 256 bits</span>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

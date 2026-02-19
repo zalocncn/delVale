@@ -7,24 +7,45 @@
     <meta name="description" content="Guía completa sobre telemedicina y salud en Perú. Información confiable para cuidar tu salud desde casa.">
     <meta name="keywords" content="telemedicina Perú, consulta médica online, doctor en línea, salud online Perú">
     <link rel="canonical" href="https://delvir.co/blog/post-29.html">
-    <link rel="icon" href="../favicon.svg">
+    <link rel="icon" href="../../favicon.svg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>html{scroll-behavior:smooth;}body{font-family:'Inter',sans-serif;}</style>
+    <style>html{scroll-behavior:smooth;}body{font-family:'Inter',sans-serif;}
+        #mobile-menu.open { display: block !important; }
+        @media (min-width: 768px) { #mobile-menu { display: none !important; } }
+</style>
 </head>
-<body class="bg-[#F6F7FC]">
-    <nav class="fixed w-full z-50 top-0 bg-white/80 backdrop-blur-md border-b border-[rgba(20,21,26,0.06)]">
+<body class="bg-[#F6F7FC] overflow-x-hidden">
+    <nav class="fixed w-full z-50 top-0 left-0 bg-white/80 backdrop-blur-md border-b border-[rgba(20,21,26,0.06)]">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="../index.html" class="text-2xl font-semibold tracking-widest text-[#14151A]">DELVIR</a>
+            <a href="../../index.html" class="text-2xl font-semibold tracking-tighter text-[#14151A] flex items-center gap-2 group">
+                <span class="tracking-widest">DELVIR</span>
+            </a>
             <div class="hidden md:flex items-center gap-8">
-                <a href="../how-it-works.html" class="text-sm text-[#4A4E5C] hover:text-[#6C6BFF]">Cómo funciona</a>
-                <a href="../faq.html" class="text-sm text-[#4A4E5C] hover:text-[#6C6BFF]">FAQ</a>
-                <a href="../../index.html#precio" class="h-10 px-6 rounded-full bg-[#6C6BFF] hover:bg-[#5757E6] text-white text-sm font-medium">Agendar</a>
+                <a href="../../how-it-works.html" class="text-sm font-normal text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Cómo funciona</a>
+                <a href="../../faq.html" class="text-sm font-normal text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Preguntas frecuentes</a>
+                <a href="/blog/" class="text-sm font-normal text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Blog</a>
+                <a href="../../index.html#precio" class="h-10 px-6 rounded-full bg-[#6C6BFF] hover:bg-[#5757E6] text-white text-sm font-medium transition-all duration-300 shadow-[0_6px_16px_0px_rgba(20,21,26,0.08)] hover:shadow-[0_10px_28px_0px_rgba(20,21,26,0.15)] hover:-translate-y-0.5 inline-flex items-center justify-center">
+                    Comenzar
+                </a>
+            </div>
+            <button type="button" id="mobile-menu-btn" class="md:hidden text-[#14151A] p-2 -mr-2" aria-label="Abrir menú">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="24" height="24"></iconify-icon>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 w-full z-50 bg-white border-b border-[rgba(20,21,26,0.06)] shadow-lg">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-1">
+                <a href="../../how-it-works.html" class="py-3 text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Cómo funciona</a>
+                <a href="../../faq.html" class="py-3 text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Preguntas frecuentes</a>
+                <a href="/blog/" class="py-3 text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Blog</a>
+                <a href="../../index.html#precio" class="py-3 inline-flex items-center justify-center h-10 px-6 rounded-full bg-[#6C6BFF] text-white text-sm font-medium w-fit">Comenzar</a>
             </div>
         </div>
     </nav>
-
+    <script>
+    (function(){var btn=document.getElementById('mobile-menu-btn');var menu=document.getElementById('mobile-menu');if(!btn||!menu)return;function toggleMenu(){menu.classList.toggle('open');menu.classList.toggle('hidden');btn.setAttribute('aria-expanded',menu.classList.contains('open'));}btn.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();toggleMenu();});document.addEventListener('click',function(e){if(menu.classList.contains('open')&&!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.add('hidden');menu.classList.remove('open');btn.setAttribute('aria-expanded','false');}});})();
+    </script>
     <header class="pt-32 pb-16 md:pt-40 md:pb-20 bg-white">
         <div class="max-w-4xl mx-auto px-6">
             <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E0E7FF] border border-[#C7D2FE] mb-6">
@@ -160,9 +181,9 @@
                             Comienza Tu Consulta Online Ahora
                         </h3>
                         <p class="text-white/85 mb-6 text-lg">
-                            Médicos verificados disponibles para <a href="../ciudades/lima.html" class="text-white underline font-medium">Lima</a>, 
-                            <a href="../ciudades/arequipa.html" class="text-white underline font-medium">Arequipa</a>, 
-                            <a href="../ciudades/cusco.html" class="text-white underline font-medium">Cusco</a> y todo el Perú.
+                            Médicos verificados disponibles para <a href="../../ciudades/lima.html" class="text-white underline font-medium">Lima</a>, 
+                            <a href="../../ciudades/arequipa.html" class="text-white underline font-medium">Arequipa</a>, 
+                            <a href="../../ciudades/cusco.html" class="text-white underline font-medium">Cusco</a> y todo el Perú.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4">
                             <a href="../../index.html#precio" class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-[#6C6BFF] hover:bg-[#5757E6] text-white rounded-full font-medium transition-all shadow-lg">
@@ -182,27 +203,27 @@
                 </p>
                 
                 <div class="grid md:grid-cols-3 gap-4 mb-10">
-                    <a href="../ciudades/lima.html" class="p-5 bg-[#F6F7FC] rounded-xl hover:bg-[#E0E7FF] transition-colors group">
+                    <a href="../../ciudades/lima.html" class="p-5 bg-[#F6F7FC] rounded-xl hover:bg-[#E0E7FF] transition-colors group">
                         <h4 class="font-semibold text-[#14151A] mb-1 group-hover:text-[#6C6BFF]">Lima</h4>
                         <p class="text-sm text-[#74798C]">Evita el tráfico y consulta desde casa</p>
                     </a>
-                    <a href="../ciudades/arequipa.html" class="p-5 bg-[#F6F7FC] rounded-xl hover:bg-[#E0E7FF] transition-colors group">
+                    <a href="../../ciudades/arequipa.html" class="p-5 bg-[#F6F7FC] rounded-xl hover:bg-[#E0E7FF] transition-colors group">
                         <h4 class="font-semibold text-[#14151A] mb-1 group-hover:text-[#6C6BFF]">Arequipa</h4>
                         <p class="text-sm text-[#74798C]">Atención médica inmediata</p>
                     </a>
-                    <a href="../ciudades/cusco.html" class="p-5 bg-[#F6F7FC] rounded-xl hover:bg-[#E0E7FF] transition-colors group">
+                    <a href="../../ciudades/cusco.html" class="p-5 bg-[#F6F7FC] rounded-xl hover:bg-[#E0E7FF] transition-colors group">
                         <h4 class="font-semibold text-[#14151A] mb-1 group-hover:text-[#6C6BFF]">Cusco</h4>
                         <p class="text-sm text-[#74798C]">Ideal para mal de altura</p>
                     </a>
-                    <a href="../ciudades/trujillo.html" class="p-5 bg-[#F6F7FC] rounded-xl hover:bg-[#E0E7FF] transition-colors group">
+                    <a href="../../ciudades/trujillo.html" class="p-5 bg-[#F6F7FC] rounded-xl hover:bg-[#E0E7FF] transition-colors group">
                         <h4 class="font-semibold text-[#14151A] mb-1 group-hover:text-[#6C6BFF]">Trujillo</h4>
                         <p class="text-sm text-[#74798C]">Consulta sin desplazamientos</p>
                     </a>
-                    <a href="../ciudades/piura.html" class="p-5 bg-[#F6F7FC] rounded-xl hover:bg-[#E0E7FF] transition-colors group">
+                    <a href="../../ciudades/piura.html" class="p-5 bg-[#F6F7FC] rounded-xl hover:bg-[#E0E7FF] transition-colors group">
                         <h4 class="font-semibold text-[#14151A] mb-1 group-hover:text-[#6C6BFF]">Piura</h4>
                         <p class="text-sm text-[#74798C]">Salud accesible en el norte</p>
                     </a>
-                    <a href="../ciudades/iquitos.html" class="p-5 bg-[#F6F7FC] rounded-xl hover:bg-[#E0E7FF] transition-colors group">
+                    <a href="../../ciudades/iquitos.html" class="p-5 bg-[#F6F7FC] rounded-xl hover:bg-[#E0E7FF] transition-colors group">
                         <h4 class="font-semibold text-[#14151A] mb-1 group-hover:text-[#6C6BFF]">Iquitos</h4>
                         <p class="text-sm text-[#74798C]">Telemedicina para la Amazonía</p>
                     </a>
@@ -287,20 +308,41 @@
         </div>
     </article>
 
-    <footer class="bg-[#15161A] pt-16 pb-10 text-white">
+    <footer class="bg-[#15161A] pt-20 pb-10 text-white border-t border-[rgba(255,255,255,0.05)]">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center">
-                <a href="../index.html" class="text-2xl font-semibold tracking-widest text-white inline-block mb-6">DELVIR</a>
-                <div class="flex flex-wrap justify-center gap-8 mb-8 text-sm text-[#9AA0B2]">
-                    <a href="../how-it-works.html" class="hover:text-white transition-colors">Cómo funciona</a>
-                    <a href="../faq.html" class="hover:text-white transition-colors">FAQ</a>
-                    <a href="../ciudades/lima.html" class="hover:text-white transition-colors">Lima</a>
-                    <a href="../ciudades/arequipa.html" class="hover:text-white transition-colors">Arequipa</a>
-                    <a href="../privacy.html" class="hover:text-white transition-colors">Privacidad</a>
-                    <a href="../terms.html" class="hover:text-white transition-colors">Términos</a>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 mb-16">
+                <div class="col-span-2 lg:col-span-2 pr-10">
+                    <a href="../../index.html" class="text-2xl font-semibold tracking-tighter text-white mb-6 block">DELVIR</a>
+                    <p class="text-[#9AA0B2] text-sm leading-relaxed mb-6">
+                        Consultas de medicina general en línea con médicos verificados.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center hover:bg-[rgba(255,255,255,0.1)] transition-colors text-white">
+                            <iconify-icon icon="solar:brand-instagram-linear" width="20"></iconify-icon>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center hover:bg-[rgba(255,255,255,0.1)] transition-colors text-white">
+                            <iconify-icon icon="solar:brand-twitter-linear" width="20"></iconify-icon>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center hover:bg-[rgba(255,255,255,0.1)] transition-colors text-white">
+                            <iconify-icon icon="solar:brand-facebook-linear" width="20"></iconify-icon>
+                        </a>
+                    </div>
                 </div>
+                <div>
+                    <h4 class="text-sm font-semibold mb-4 text-white">Legal</h4>
+                    <ul class="space-y-3 text-[#9AA0B2] text-sm">
+                        <li><a href="../../contact.html" class="hover:text-white transition-colors">Contáctanos</a></li>
+                        <li><a href="../../terms.html" class="hover:text-white transition-colors">Términos y condiciones</a></li>
+                        <li><a href="../../privacy.html" class="hover:text-white transition-colors">Política de privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-[rgba(255,255,255,0.1)] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-xs text-[#74798C]">© 2026 Delvir Limited Liability Co. Todos los derechos reservados.</p>
-                <p class="text-xs text-[#74798C] mt-2">Consulta médica online en Perú. Médicos verificados.</p>
+                <div class="flex gap-2">
+                    <iconify-icon icon="solar:lock-keyhole-linear" class="text-[#9AA0B2]" width="16"></iconify-icon>
+                    <span class="text-xs text-[#9AA0B2]">SSL seguro de 256 bits</span>
+                </div>
             </div>
         </div>
     </footer>
