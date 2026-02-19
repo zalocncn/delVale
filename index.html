@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delvir — Consulta Médica Online en Perú | Doctor en Línea desde S/80</title>
+    <meta name="description" content="Consulta con un médico general verificado por video o teléfono desde S/80. Sin colas, sin complicaciones. Agenda en minutos y recibe atención médica desde cualquier lugar de Perú.">
+    <meta name="keywords" content="consulta médica online, doctor en línea Perú, telemedicina Perú, médico online Lima, consulta médica por videollamada, medicina general online">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Delvir">
+    <link rel="canonical" href="https://delvir.co/">
+    <link rel="alternate" hreflang="es-PE" href="https://delvir.co/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://delvir.co/">
+    <meta property="og:title" content="Delvir — Consulta Médica Online en Perú | Doctor en Línea">
+    <meta property="og:description" content="Consulta con un médico general verificado por video o teléfono desde S/80. Sin colas, sin complicaciones. Atención médica inmediata desde cualquier lugar.">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:site_name" content="Delvir">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Delvir — Consulta Médica Online en Perú">
+    <meta name="twitter:description" content="Consulta con un médico general verificado por video o teléfono desde S/80. Sin colas, sin complicaciones.">
+    
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Custom scrollbar to match aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F6F7FC;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C7C9D9;
+            border-radius: 99px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9AA0B2;
+        }
+
+        /* Calendly widget styling to match Delvir UI */
+        .delvir-calendly {
+            border-radius: 18px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            box-shadow: 0 18px 48px 0 rgba(20, 21, 26, 0.14);
+        }
+        .delvir-calendly iframe {
+            border: 0;
+            border-radius: 18px;
+        }
+    </style>
+</head>
+<body class="bg-[#F6F7FC] text-[#14151A] overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 top-0 left-0 bg-white/80 backdrop-blur-md border-b border-[rgba(20,21,26,0.06)]">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-semibold tracking-tighter text-[#14151A] flex items-center gap-2 group">
+                <span class="tracking-widest">DELVIR</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="how-it-works.html" class="text-sm font-normal text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Cómo funciona</a>
+                <a href="faq.html" class="text-sm font-normal text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Preguntas frecuentes</a>
+                <a href="blog/" class="text-sm font-normal text-[#4A4E5C] hover:text-[#6C6BFF] transition-colors">Blog</a>
+                <a href="#precio" class="h-10 px-6 rounded-full bg-[#6C6BFF] hover:bg-[#5757E6] text-white text-sm font-medium transition-all duration-300 shadow-[0_6px_16px_0px_rgba(20,21,26,0.08)] hover:shadow-[0_10px_28px_0px_rgba(20,21,26,0.15)] hover:-translate-y-0.5 inline-flex items-center justify-center">
+                    Comenzar
+                </a>
+            </div>
+
+            <!-- Mobile Menu -->
+            <button class="md:hidden text-[#14151A]">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="24" height="24"></iconify-icon>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
+        <!-- Background Gradient Wash -->
+        <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(108,107,255,0.16)_0%,rgba(255,255,255,0.0)_55%)] pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            
+            <!-- Left Content -->
+            <div class="space-y-8 max-w-3xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E0E7FF] border border-[#C7D2FE]">
+                    <span class="flex h-2 w-2 rounded-full bg-[#6C6BFF]"></span>
+                    <span class="text-xs font-medium text-[#5757E6] tracking-tight">Plataforma de salud en línea</span>
+                </div>
+
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter leading-[1.15] text-[#14151A]">
+                    Atención médica <span class="text-[#6C6BFF]">inmediata</span>, estés donde estés
+                </h1>
+                
+<p class="text-lg text-[#4A4E5C] leading-relaxed max-w-2xl mx-auto">
+                Consulta online con un doctor licenciado en minutos, sin largas esperas ni complicaciones. Ideal para tus padres, familiares mayores o cualquier persona que necesite orientación médica rápida y confiable.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 pt-2 items-center justify-center">
+                    <a href="#precio" class="h-12 px-8 rounded-full bg-[linear-gradient(135deg,#5757E6_0%,#6C6BFF_55%,#8E8CFF_100%)] text-white text-base font-medium shadow-[0_10px_28px_0px_rgba(108,107,255,0.25)] hover:shadow-[0_14px_32px_0px_rgba(108,107,255,0.35)] transition-all duration-300 hover:-translate-y-1 active:scale-[0.985] flex items-center justify-center gap-2">
+                        <span>Hablar con un doctor ahora</span>
+                        <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" width="20"></iconify-icon>
+                    </a>
+                    <div class="flex items-center gap-4">
+                        <div class="flex -space-x-3">
+                            <img src="https://i.pravatar.cc/100?img=5" alt="Usuario" class="w-10 h-10 rounded-full border-2 border-white object-cover">
+                            <img src="https://i.pravatar.cc/100?img=9" alt="Usuario" class="w-10 h-10 rounded-full border-2 border-white object-cover">
+                            <img src="https://i.pravatar.cc/100?img=12" alt="Usuario" class="w-10 h-10 rounded-full border-2 border-white object-cover">
+                            <div class="w-10 h-10 rounded-full border-2 border-white bg-[#F2F3FA] flex items-center justify-center text-xs font-semibold text-[#6C6BFF]">300+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Visual removed -->
+        </div>
+    </header>
+
+    <!-- Category Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 max-w-2xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-[#14151A] mb-4">¿Qué tipo de consulta necesitas?</h2>
+                <p class="text-base text-[#4A4E5C]">Elige la opción que mejor describa lo que estás buscando.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <a href="#" class="group p-6 rounded-[18px] bg-[#F6F7FC] hover:bg-white border border-transparent hover:border-[rgba(20,21,26,0.06)] shadow-none hover:shadow-[0_10px_28px_0px_rgba(20,21,26,0.08)] transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-[14px] bg-white border border-[rgba(20,21,26,0.06)] flex items-center justify-center text-[#6C6BFF] mb-6 group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="solar:user-circle-linear" width="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-medium text-[#14151A] mb-2">Medicina general</h3>
+                    <p class="text-sm text-[#4A4E5C] leading-relaxed">Síntomas comunes, dudas de salud y orientación clínica general.</p>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="#" class="group p-6 rounded-[18px] bg-[#F6F7FC] hover:bg-white border border-transparent hover:border-[rgba(20,21,26,0.06)] shadow-none hover:shadow-[0_10px_28px_0px_rgba(20,21,26,0.08)] transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-[14px] bg-white border border-[rgba(20,21,26,0.06)] flex items-center justify-center text-[#6C6BFF] mb-6 group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="solar:users-group-rounded-linear" width="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-medium text-[#14151A] mb-2">Seguimiento</h3>
+                    <p class="text-sm text-[#4A4E5C] leading-relaxed">Seguimiento de tratamientos, dudas sobre medicamentos y renovaciones.</p>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="#" class="group p-6 rounded-[18px] bg-[#F6F7FC] hover:bg-white border border-transparent hover:border-[rgba(20,21,26,0.06)] shadow-none hover:shadow-[0_10px_28px_0px_rgba(20,21,26,0.08)] transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-[14px] bg-white border border-[rgba(20,21,26,0.06)] flex items-center justify-center text-[#6C6BFF] mb-6 group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="solar:face-scan-circle-linear" width="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-medium text-[#14151A] mb-2">Prevención y bienestar</h3>
+                    <p class="text-sm text-[#4A4E5C] leading-relaxed">Chequeos, hábitos saludables y prevención basada en evidencia.</p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / How it works -->
+    <section class="py-24 bg-[#F6F7FC]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <!-- Left: UI Demo -->
+                <div class="relative order-2 md:order-1">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-[#6C6BFF]/5 to-transparent rounded-[34px]"></div>
+                    <div class="relative bg-white rounded-[26px] p-8 shadow-[0_18px_48px_0px_rgba(20,21,26,0.1)] border border-[rgba(20,21,26,0.06)]">
+                        <div class="flex items-center gap-4 pb-6 border-b border-[rgba(20,21,26,0.06)]">
+                            <div class="relative">
+                                <img src="https://i.pravatar.cc/150?img=32" class="w-12 h-12 rounded-full object-cover">
+                                <div class="absolute bottom-0 right-0 w-3 h-3 bg-[#22C55E] border-2 border-white rounded-full"></div>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-semibold text-[#14151A]">Dra. Hernández</h4>
+                                <p class="text-xs text-[#6C6BFF] font-medium">En línea ahora</p>
+                            </div>
+                            <div class="ml-auto flex gap-2">
+                                <button class="p-2 rounded-full hover:bg-[#F6F7FC] text-[#4A4E5C]">
+                                    <iconify-icon icon="solar:phone-linear" width="20"></iconify-icon>
+                                </button>
+                                <button class="p-2 rounded-full hover:bg-[#F6F7FC] text-[#4A4E5C]">
+                                    <iconify-icon icon="solar:videocamera-record-linear" width="20"></iconify-icon>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-6 space-y-4">
+                            <div class="flex gap-3">
+                                <img src="https://i.pravatar.cc/150?img=32" class="w-8 h-8 rounded-full object-cover mt-1">
+                                <div class="bg-[#F2F3FA] p-3 rounded-2xl rounded-tl-none text-sm text-[#4A4E5C] max-w-[80%]">
+                                    ¡Hola! Revisé tu formulario inicial. ¿Cómo te has sentido últimamente?
+                                </div>
+                            </div>
+                            <div class="flex gap-3 justify-end">
+                                <div class="bg-[#6C6BFF] p-3 rounded-2xl rounded-tr-none text-sm text-white max-w-[80%] shadow-[0_6px_16px_0px_rgba(108,107,255,0.2)]">
+                                    Un poco abrumado/a, la verdad. El trabajo ha sido estresante.
+                                </div>
+                            </div>
+                             <div class="flex gap-3">
+                                <img src="https://i.pravatar.cc/150?img=32" class="w-8 h-8 rounded-full object-cover mt-1">
+                                <div class="bg-[#F2F3FA] p-3 rounded-2xl rounded-tl-none text-sm text-[#4A4E5C] max-w-[80%]">
+                                    Te entiendo completamente. Vamos a desglosarlo juntos.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Input area -->
+                        <div class="pt-2">
+                            <div class="h-12 w-full bg-[#F6F7FC] rounded-[10px] flex items-center px-4 text-[#9AA0B2] text-sm">
+                                Escribe aquí...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Text Content -->
+                <div class="order-1 md:order-2 space-y-8">
+                    <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-[#14151A]">
+                        Comunicación <br>
+                        <span class="text-[#6C6BFF]">a tu manera.</span>
+                    </h2>
+                    <p class="text-base text-[#4A4E5C] leading-relaxed">
+                        Habla con tu médico por llamada o video, desde cualquier lugar.
+                    </p>
+
+                    <div class="space-y-6">
+                         <!-- Feature Row -->
+                        <div class="flex gap-4 items-start">
+                            <div class="w-10 h-10 rounded-full bg-white border border-[rgba(20,21,26,0.06)] flex items-center justify-center text-[#6C6BFF] shadow-sm flex-shrink-0">
+                                <iconify-icon icon="solar:calendar-mark-linear" width="20"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-medium text-[#14151A]">Consultas en vivo</h4>
+                                <p class="text-sm text-[#74798C] mt-1">Programa consultas por video o teléfono.</p>
+                            </div>
+                        </div>
+
+                         <!-- Feature Row -->
+                        <div class="flex gap-4 items-start">
+                            <div class="w-10 h-10 rounded-full bg-white border border-[rgba(20,21,26,0.06)] flex items-center justify-center text-[#6C6BFF] shadow-sm flex-shrink-0">
+                                <iconify-icon icon="solar:shield-check-linear" width="20"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-medium text-[#14151A]">Privado y seguro</h4>
+                                <p class="text-sm text-[#74798C] mt-1">Cifrado de nivel bancario para proteger tu privacidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Therapist Vetting Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-[#14151A] mb-4">Profesionales de salud, con licencia y verificados.</h2>
+            <p class="text-base text-[#4A4E5C] max-w-2xl mx-auto mb-16">
+                Solo trabajamos con médicos generales con licencia, experiencia comprobada y muchos años de práctica.
+            </p>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-4 border-t border-b border-[rgba(20,21,26,0.06)] py-12">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-[#14151A] tracking-tight mb-1">14+</div>
+                    <div class="text-xs font-medium text-[#74798C] uppercase tracking-wider">Médicos</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-[#14151A] tracking-tight mb-1">300+</div>
+                    <div class="text-xs font-medium text-[#74798C] uppercase tracking-wider">Personas ayudadas</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-[#14151A] tracking-tight mb-1">700+</div>
+                    <div class="text-xs font-medium text-[#74798C] uppercase tracking-wider">Consultas realizadas</div>
+                </div>
+                 <div class="text-center">
+                    <div class="text-3xl font-bold text-[#14151A] tracking-tight mb-1">100%</div>
+                    <div class="text-xs font-medium text-[#74798C] uppercase tracking-wider">Certificados</div>
+                </div>
+            </div>
+
+            <!-- Therapist Cards Horizontal Scroll (removed) -->
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="py-20 bg-[#F6F7FC]">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-semibold tracking-tight text-center mb-12">¿Por qué elegir Delvir?</h2>
+            
+            <div class="w-full max-w-3xl mx-auto bg-white rounded-2xl shadow-[0_10px_28px_rgba(0,0,0,0.1)] overflow-hidden border border-[#0E0F12]/5 hover:shadow-[0_18px_52px_rgba(0,0,0,0.14)] transition-shadow duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                <!-- Header -->
+                <div class="grid grid-cols-2 px-6 py-5 sm:px-8 bg-[#F8F8F8] border-b border-[#0E0F12]/5">
+                    <div class="text-xs uppercase tracking-widest text-[#6E717C] font-medium flex items-center">
+                        Característica
+                    </div>
+                    <div class="text-xs uppercase tracking-widest text-[#6C6BFF] font-semibold text-right flex items-center justify-end">
+                        Delvir Plan
+                    </div>
+                </div>
+
+                <!-- Row 1: Pricing -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 px-6 py-6 sm:px-8 items-center border-b border-[#0E0F12]/5 hover:bg-[#FAFAFA] transition-colors duration-150 group">
+                    <div class="text-[#0E0F12] font-medium text-lg tracking-tight group-hover:translate-x-1 transition-transform duration-200 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                        Precio por consulta
+                    </div>
+                    <div class="flex sm:justify-end">
+                        <span class="inline-flex items-center px-4 py-1.5 rounded-full bg-[#6C6BFF]/10 text-[#6C6BFF] font-semibold text-sm border border-[#6C6BFF]/20 shadow-sm">
+                            S/ 80 · por consulta
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Row 2: Communication -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 px-6 py-6 sm:px-8 items-center border-b border-[#0E0F12]/5 hover:bg-[#FAFAFA] transition-colors duration-150 group">
+                    <div class="text-[#0E0F12] font-medium text-lg tracking-tight group-hover:translate-x-1 transition-transform duration-200 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                        Comunicación
+                    </div>
+                    <div class="flex sm:justify-end items-center">
+                        <div class="flex items-center justify-center w-8 h-8 rounded-full bg-[#22C55E]/10 text-[#22C55E]">
+                            <iconify-icon icon="solar:check-circle-bold" width="20"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3: Change Therapist -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 px-6 py-6 sm:px-8 items-center border-b border-[#0E0F12]/5 hover:bg-[#FAFAFA] transition-colors duration-150 group">
+                    <div class="text-[#0E0F12] font-medium text-lg tracking-tight group-hover:translate-x-1 transition-transform duration-200 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                        Cambiar de médico
+                    </div>
+                    <div class="flex sm:justify-end text-[#3D3F46] text-base">
+                        Al instante, <span class="text-[#0E0F12] font-semibold ml-1">sin costo</span>
+                    </div>
+                </div>
+
+                <!-- Row 4: Availability -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 px-6 py-6 sm:px-8 items-center hover:bg-[#FAFAFA] transition-colors duration-150 group">
+                    <div class="text-[#0E0F12] font-medium text-lg tracking-tight group-hover:translate-x-1 transition-transform duration-200 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                        Disponibilidad
+                    </div>
+                    <div class="flex sm:justify-end text-[#3D3F46] text-base flex items-center gap-2">
+                        <iconify-icon icon="solar:clock-circle-linear" class="text-[#9A9DA8]" width="16"></iconify-icon>
+                        En cualquier momento
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Precios -->
+    <section id="precio" class="py-16 bg-white scroll-mt-32">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-[#14151A]">Precio</h2>
+          <p class="mt-3 text-[#4A4E5C]">
+            Consulta de medicina general en línea. Pago por consulta.
+          </p>
+        </div>
+
+        <div class="mt-10 max-w-5xl mx-auto">
+          <div class="grid grid-cols-1 gap-6">
+            <!-- Consulta médica -->
+            <div class="bg-[#14151A] rounded-[22px] p-8 md:p-10 relative overflow-hidden">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(108,107,255,0.22)_0%,transparent_48%)] pointer-events-none"></div>
+              <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
+                <!-- Price & features column -->
+                <div>
+                  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white text-xs font-medium border border-white/10">
+                    <iconify-icon icon="solar:tag-price-linear" width="14"></iconify-icon>
+                    Medicina general
+                  </div>
+                  <div class="mt-4 flex flex-col gap-6">
+                    <div>
+                      <p class="text-4xl md:text-5xl font-bold text-white tracking-tight">S/ 80</p>
+                      <p class="mt-2 text-sm text-white/75">Por consulta</p>
+                    </div>
+                    <ul class="space-y-3 text-sm text-white/85">
+                      <li class="flex gap-2"><iconify-icon icon="solar:check-circle-bold" class="text-[#22C55E]" width="18"></iconify-icon> Consultas por video o teléfono</li>
+                      <li class="flex gap-2"><iconify-icon icon="solar:check-circle-bold" class="text-[#22C55E]" width="18"></iconify-icon> Agenda según disponibilidad</li>
+                      <li class="flex gap-2"><iconify-icon icon="solar:check-circle-bold" class="text-[#22C55E]" width="18"></iconify-icon> Atención con médico general</li>
+                    </ul>
+                    <a href="#my-cal-inline-30min" class="mt-6 w-full h-11 rounded-full bg-[#6C6BFF] hover:bg-[#5757E6] text-white transition-colors text-sm font-semibold shadow-[0_10px_28px_0px_rgba(108,107,255,0.25)] inline-flex items-center justify-center gap-2">
+                      Elige tu horario de consulta
+                      <iconify-icon icon="solar:alt-arrow-right-linear" width="18"></iconify-icon>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Cal inline embed code begins -->
+                <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-30min"></div>
+                <script type="text/javascript">
+                  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                  Cal("init", "30min", {origin:"https://app.cal.com"});
+                  Cal.ns["30min"]("inline", {
+                    elementOrSelector:"#my-cal-inline-30min",
+                    config: {"layout":"column_view","useSlotsViewOnSmallScreen":"true","theme":"light"},
+                    calLink: "agenda-delvir/30min",
+                  });
+                  Cal.ns["30min"]("ui", {"theme":"light","hideEventTypeDetails":true,"layout":"column_view"});
+                </script>
+                <!-- Cal inline embed code ends -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- City Pages Internal Links (Local SEO) -->
+    <section class="py-12 bg-[#F6F7FC] text-center relative overflow-hidden">
+        <!-- Subtle Lavender Wash Background (bg.sectionTint) -->
+        <div class="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-[rgba(124,118,255,0.08)] to-transparent -z-10 rounded-[34px] pointer-events-none"></div>
+        <div class="w-full max-w-5xl mx-auto relative">
+            <div class="py-16 px-6 md:px-12 flex flex-col items-center text-center">
+                <!-- Icon/Badge Header -->
+                <div class="mb-6 inline-flex items-center justify-center p-3 bg-white rounded-full shadow-[0_6px_16px_rgba(20,21,26,0.08)] ring-1 ring-[rgba(20,21,26,0.06)]">
+                    <i data-lucide="map" class="w-6 h-6 text-[#6C6BFF]"></i>
+                </div>
+                <!-- Typography: H2 -->
+                <h2 class="text-[26px] md:text-[30px] font-semibold tracking-tight text-[#14151A] leading-[1.15] mb-3">
+                    Disponible en todo el Perú
+                </h2>
+                <!-- Typography: Body -->
+                <p class="text-[16px] text-[#4A4E5C] leading-relaxed max-w-lg mb-12">
+                    Consulta médica online desde cualquier ciudad. Accede a especialistas de confianza sin importar dónde te encuentres.
+                </p>
+                <!-- Cities Grid/List -->
+                <div class="flex flex-wrap justify-center gap-4 w-full">
+                    <a href="ciudades/lima.html" class="group relative flex items-center gap-3 bg-white px-6 py-3.5 rounded-full border border-[rgba(20,21,26,0.06)] shadow-[0_6px_16px_rgba(20,21,26,0.08)] transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[3px] hover:shadow-[0_14px_30px_rgba(20,21,26,0.12)] hover:border-[#6C6BFF]/30 hover:ring-2 hover:ring-[#6C6BFF]/10 active:scale-[0.985]">
+                        <div class="p-1.5 rounded-full bg-[#F2F3FA] text-[#6C6BFF] group-hover:bg-[#6C6BFF] group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="map-pin" class="w-4 h-4 stroke-[1.5]"></i>
+                        </div>
+                        <span class="text-[15px] font-medium text-[#14151A] group-hover:text-[#6C6BFF] transition-colors">Lima</span>
+                    </a>
+                    <a href="ciudades/arequipa.html" class="group relative flex items-center gap-3 bg-white px-6 py-3.5 rounded-full border border-[rgba(20,21,26,0.06)] shadow-[0_6px_16px_rgba(20,21,26,0.08)] transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[3px] hover:shadow-[0_14px_30px_rgba(20,21,26,0.12)] hover:border-[#6C6BFF]/30 hover:ring-2 hover:ring-[#6C6BFF]/10 active:scale-[0.985]">
+                        <div class="p-1.5 rounded-full bg-[#F2F3FA] text-[#6C6BFF] group-hover:bg-[#6C6BFF] group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="map-pin" class="w-4 h-4 stroke-[1.5]"></i>
+                        </div>
+                        <span class="text-[15px] font-medium text-[#14151A] group-hover:text-[#6C6BFF] transition-colors">Arequipa</span>
+                    </a>
+                    <a href="ciudades/trujillo.html" class="group relative flex items-center gap-3 bg-white px-6 py-3.5 rounded-full border border-[rgba(20,21,26,0.06)] shadow-[0_6px_16px_rgba(20,21,26,0.08)] transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[3px] hover:shadow-[0_14px_30px_rgba(20,21,26,0.12)] hover:border-[#6C6BFF]/30 hover:ring-2 hover:ring-[#6C6BFF]/10 active:scale-[0.985]">
+                        <div class="p-1.5 rounded-full bg-[#F2F3FA] text-[#6C6BFF] group-hover:bg-[#6C6BFF] group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="map-pin" class="w-4 h-4 stroke-[1.5]"></i>
+                        </div>
+                        <span class="text-[15px] font-medium text-[#14151A] group-hover:text-[#6C6BFF] transition-colors">Trujillo</span>
+                    </a>
+                    <a href="ciudades/cusco.html" class="group relative flex items-center gap-3 bg-white px-6 py-3.5 rounded-full border border-[rgba(20,21,26,0.06)] shadow-[0_6px_16px_rgba(20,21,26,0.08)] transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[3px] hover:shadow-[0_14px_30px_rgba(20,21,26,0.12)] hover:border-[#6C6BFF]/30 hover:ring-2 hover:ring-[#6C6BFF]/10 active:scale-[0.985]">
+                        <div class="p-1.5 rounded-full bg-[#F2F3FA] text-[#6C6BFF] group-hover:bg-[#6C6BFF] group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="map-pin" class="w-4 h-4 stroke-[1.5]"></i>
+                        </div>
+                        <span class="text-[15px] font-medium text-[#14151A] group-hover:text-[#6C6BFF] transition-colors">Cusco</span>
+                    </a>
+                    <a href="ciudades/chiclayo.html" class="group relative flex items-center gap-3 bg-white px-6 py-3.5 rounded-full border border-[rgba(20,21,26,0.06)] shadow-[0_6px_16px_rgba(20,21,26,0.08)] transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[3px] hover:shadow-[0_14px_30px_rgba(20,21,26,0.12)] hover:border-[#6C6BFF]/30 hover:ring-2 hover:ring-[#6C6BFF]/10 active:scale-[0.985]">
+                        <div class="p-1.5 rounded-full bg-[#F2F3FA] text-[#6C6BFF] group-hover:bg-[#6C6BFF] group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="map-pin" class="w-4 h-4 stroke-[1.5]"></i>
+                        </div>
+                        <span class="text-[15px] font-medium text-[#14151A] group-hover:text-[#6C6BFF] transition-colors">Chiclayo</span>
+                    </a>
+                    <a href="ciudades/piura.html" class="group relative flex items-center gap-3 bg-white px-6 py-3.5 rounded-full border border-[rgba(20,21,26,0.06)] shadow-[0_6px_16px_rgba(20,21,26,0.08)] transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[3px] hover:shadow-[0_14px_30px_rgba(20,21,26,0.12)] hover:border-[#6C6BFF]/30 hover:ring-2 hover:ring-[#6C6BFF]/10 active:scale-[0.985]">
+                        <div class="p-1.5 rounded-full bg-[#F2F3FA] text-[#6C6BFF] group-hover:bg-[#6C6BFF] group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="map-pin" class="w-4 h-4 stroke-[1.5]"></i>
+                        </div>
+                        <span class="text-[15px] font-medium text-[#14151A] group-hover:text-[#6C6BFF] transition-colors">Piura</span>
+                    </a>
+                    <a href="ciudades/huancayo.html" class="group relative flex items-center gap-3 bg-white px-6 py-3.5 rounded-full border border-[rgba(20,21,26,0.06)] shadow-[0_6px_16px_rgba(20,21,26,0.08)] transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[3px] hover:shadow-[0_14px_30px_rgba(20,21,26,0.12)] hover:border-[#6C6BFF]/30 hover:ring-2 hover:ring-[#6C6BFF]/10 active:scale-[0.985]">
+                        <div class="p-1.5 rounded-full bg-[#F2F3FA] text-[#6C6BFF] group-hover:bg-[#6C6BFF] group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="map-pin" class="w-4 h-4 stroke-[1.5]"></i>
+                        </div>
+                        <span class="text-[15px] font-medium text-[#14151A] group-hover:text-[#6C6BFF] transition-colors">Huancayo</span>
+                    </a>
+                    <a href="ciudades/iquitos.html" class="group relative flex items-center gap-3 bg-white px-6 py-3.5 rounded-full border border-[rgba(20,21,26,0.06)] shadow-[0_6px_16px_rgba(20,21,26,0.08)] transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[3px] hover:shadow-[0_14px_30px_rgba(20,21,26,0.12)] hover:border-[#6C6BFF]/30 hover:ring-2 hover:ring-[#6C6BFF]/10 active:scale-[0.985]">
+                        <div class="p-1.5 rounded-full bg-[#F2F3FA] text-[#6C6BFF] group-hover:bg-[#6C6BFF] group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="map-pin" class="w-4 h-4 stroke-[1.5]"></i>
+                        </div>
+                        <span class="text-[15px] font-medium text-[#14151A] group-hover:text-[#6C6BFF] transition-colors">Iquitos</span>
+                    </a>
+                </div>
+                <!-- Optional: See All Link -->
+                <div class="mt-10">
+                    <a href="#ciudades" class="inline-flex items-center gap-1.5 text-[14px] font-medium text-[#6C6BFF] hover:text-[#5757E6] transition-colors">
+                        Ver todas las ciudades
+                        <i data-lucide="arrow-right" class="w-4 h-4 stroke-[2]"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function(){ lucide.createIcons(); });</script>
+
+    <!-- Footer -->
+    <footer class="bg-[#15161A] pt-20 pb-10 text-white border-t border-[rgba(255,255,255,0.05)]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 mb-16">
+                <div class="col-span-2 lg:col-span-2 pr-10">
+                    <a href="#" class="text-2xl font-semibold tracking-tighter text-white mb-6 block">DELVIR</a>
+                    <p class="text-[#9AA0B2] text-sm leading-relaxed mb-6">
+                        Consultas de medicina general en línea con médicos verificados.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center hover:bg-[rgba(255,255,255,0.1)] transition-colors text-white">
+                            <iconify-icon icon="solar:brand-instagram-linear" width="20"></iconify-icon>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center hover:bg-[rgba(255,255,255,0.1)] transition-colors text-white">
+                            <iconify-icon icon="solar:brand-twitter-linear" width="20"></iconify-icon>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center hover:bg-[rgba(255,255,255,0.1)] transition-colors text-white">
+                            <iconify-icon icon="solar:brand-facebook-linear" width="20"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-semibold mb-4 text-white">Legal</h4>
+                    <ul class="space-y-3 text-[#9AA0B2] text-sm">
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contáctanos</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition-colors">Términos y condiciones</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition-colors">Política de privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-[rgba(255,255,255,0.1)] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-[#74798C]">© 2026 Delvir Limited Liability Co. Todos los derechos reservados.</p>
+                <div class="flex gap-2">
+                     <iconify-icon icon="solar:lock-keyhole-linear" class="text-[#9AA0B2]" width="16"></iconify-icon>
+                     <span class="text-xs text-[#9AA0B2]">SSL seguro de 256 bits</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MedicalBusiness",
+          "@id": "https://delvir.co/#organization",
+          "name": "Delvir",
+          "url": "https://delvir.co",
+          "description": "Consultas de medicina general en línea con médicos verificados en Perú. Atención por video o teléfono desde S/80 por consulta.",
+          "priceRange": "S/ 80",
+          "currenciesAccepted": "PEN",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Peru"
+          },
+          "medicalSpecialty": "GeneralPractice",
+          "availableService": {
+            "@type": "MedicalProcedure",
+            "name": "Consulta de medicina general en línea",
+            "procedureType": "Telemedicine"
+          },
+          "offers": {
+            "@type": "Offer",
+            "name": "Consulta de medicina general",
+            "price": "80",
+            "priceCurrency": "PEN",
+            "availability": "https://schema.org/InStock"
+          },
+          "sameAs": []
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://delvir.co/#website",
+          "url": "https://delvir.co",
+          "name": "Delvir",
+          "description": "Consulta médica online en Perú",
+          "inLanguage": "es-PE",
+          "publisher": { "@id": "https://delvir.co/#organization" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://delvir.co/#webpage",
+          "url": "https://delvir.co/",
+          "name": "Delvir — Consulta Médica Online en Perú | Doctor en Línea desde S/80",
+          "isPartOf": { "@id": "https://delvir.co/#website" },
+          "about": { "@id": "https://delvir.co/#organization" },
+          "description": "Consulta con un médico general verificado por video o teléfono desde S/80. Sin colas, sin complicaciones.",
+          "inLanguage": "es-PE"
+        }
+      ]
+    }
+    </script>
+
+</body>
+</html>

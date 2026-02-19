@@ -1,0 +1,11 @@
+# Robots.txt for delvir.co
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://delvir.co/sitemap.xml
+
+# Crawl-delay (optional, polite)
+Crawl-delay: 1
