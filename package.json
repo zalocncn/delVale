@@ -1,0 +1,9 @@
+{
+  "name": "delv",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Delvir static site",
+  "dependencies": {
+    "@vercel/analytics": "^1.4.0"
+  }
+}
