@@ -431,7 +431,7 @@
         <div class="mt-10 max-w-5xl mx-auto">
           <div class="grid grid-cols-1 gap-6">
             <!-- Consulta médica -->
-            <div class="bg-[#14151A] rounded-[22px] p-8 md:p-10 relative overflow-hidden">
+            <div class="rounded-[22px] p-8 md:p-10 relative overflow-hidden text-white" style="background-color: rgba(20, 21, 26, 1);">
               <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(108,107,255,0.22)_0%,transparent_48%)] pointer-events-none"></div>
               <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
                 <!-- Price & features column -->
@@ -464,10 +464,10 @@
                   Cal("init", "30min", {origin:"https://app.cal.com"});
                   Cal.ns["30min"]("inline", {
                     elementOrSelector:"#my-cal-inline-30min",
-                    config: {"layout":"column_view","useSlotsViewOnSmallScreen":"true","theme":"light"},
+                    config: {"layout":"week_view","useSlotsViewOnSmallScreen":"true","theme":"dark"},
                     calLink: "agenda-delvir/30min",
                   });
-                  Cal.ns["30min"]("ui", {"theme":"light","hideEventTypeDetails":true,"layout":"column_view"});
+                  Cal.ns["30min"]("ui", {"theme":"dark","cssVarsPerTheme":{"light":{"cal-brand":"#14151A"}},"hideEventTypeDetails":true,"layout":"week_view"});
                 </script>
                 <!-- Cal inline embed code ends -->
 
