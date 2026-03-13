@@ -445,26 +445,17 @@
             </div>
             <!-- Right Section: CTA Button -->
             <div class="w-full md:w-[220px] shrink-0 flex md:justify-end">
-              <a href="#my-cal-inline-30min" class="group w-full inline-flex items-center justify-center gap-2 bg-[#14151A] text-[#FFFFFF] px-6 py-4 rounded-xl shadow-[0_4px_12px_rgba(20,21,26,0.08)] transition-all duration-[220ms] hover:bg-[#2A2C35] hover:shadow-[0_6px_16px_rgba(20,21,26,0.14)] hover:scale-[1.01] active:scale-[0.98] focus:outline-none focus:ring-[3px] focus:ring-[#14151A]/[0.15] focus:ring-offset-2 focus:ring-offset-[#FFFFFF]">
+              <button
+                type="button"
+                data-cal-link="agenda-delvir/30min"
+                data-cal-namespace="30min"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"dark"}'
+                class="group w-full inline-flex items-center justify-center gap-2 bg-[#14151A] text-[#FFFFFF] px-6 py-4 rounded-xl shadow-[0_4px_12px_rgba(20,21,26,0.08)] transition-all duration-[220ms] hover:bg-[#2A2C35] hover:shadow-[0_6px_16px_rgba(20,21,26,0.14)] hover:scale-[1.01] active:scale-[0.98] focus:outline-none focus:ring-[3px] focus:ring-[#14151A]/[0.15] focus:ring-offset-2 focus:ring-offset-[#FFFFFF] cursor-pointer"
+              >
                 <span class="text-base font-normal">Elegir horario</span>
-                <iconify-icon icon="solar:arrow-down-linear" class="text-lg transition-transform duration-[220ms] group-hover:translate-y-1"></iconify-icon>
-              </a>
+                <iconify-icon icon="solar:arrow-right-linear" class="text-lg transition-transform duration-[220ms] group-hover:translate-x-1"></iconify-icon>
+              </button>
             </div>
-          </div>
-
-          <!-- Calendar full width of parent -->
-          <div class="rounded-[22px] overflow-hidden" style="background-color: rgba(20, 21, 26, 1);">
-            <div class="w-full min-h-[560px] scroll-mt-28" style="overflow:scroll" id="my-cal-inline-30min"></div>
-            <script type="text/javascript">
-              (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-              Cal("init", "30min", {origin:"https://app.cal.com"});
-              Cal.ns["30min"]("inline", {
-                elementOrSelector:"#my-cal-inline-30min",
-                config: {"layout":"week_view","useSlotsViewOnSmallScreen":"true","theme":"dark"},
-                calLink: "agenda-delvir/30min",
-              });
-              Cal.ns["30min"]("ui", {"theme":"dark","cssVarsPerTheme":{"light":{"cal-brand":"#14151A"}},"hideEventTypeDetails":true,"layout":"week_view"});
-            </script>
           </div>
         </div>
       </div>
@@ -725,6 +716,16 @@
 
     <!-- Vercel Analytics (equivalent to @vercel/analytics/next <Analytics />) -->
     <script defer src="/_vercel/insights/script.js"></script>
+
+    <!-- Cal floating-popup embed code begins -->
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "30min", {origin:"https://app.cal.com"});
+
+      Cal.ns["30min"]("floatingButton", {"calLink":"agenda-delvir/30min","config":{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"dark"},"buttonText":"Agendar Consulta"});
+      Cal.ns["30min"]("ui", {"theme":"dark","hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+    <!-- Cal floating-popup embed code ends -->
 
 </body>
 </html>

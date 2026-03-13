@@ -7,7 +7,6 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
   <style>
     html { scroll-behavior: smooth; }
@@ -21,15 +20,6 @@
     ::-webkit-scrollbar-track { background: #F6F7FC; }
     ::-webkit-scrollbar-thumb { background: #C7C9D9; border-radius: 99px; }
     ::-webkit-scrollbar-thumb:hover { background: #9AA0B2; }
-    /* Keep Calendly framed like the site */
-    .delvir-calendly {
-      border-radius: 22px;
-      overflow: hidden;
-      background: #fff;
-      border: 1px solid rgba(20,21,26,0.06);
-      box-shadow: 0 18px 48px 0 rgba(20,21,26,0.10);
-    }
-    .delvir-calendly iframe { border: 0; }
   </style>
 </head>
 <body class="bg-[#F6F7FC] text-[#14151A] overflow-x-hidden flex flex-col min-h-screen">
@@ -65,15 +55,30 @@
       </div>
     </section>
 
-    <!-- Calendly -->
+    <!-- Cal.com element-click: button opens calendar -->
     <section id="calendly" class="py-16 scroll-mt-32">
-      <div class="max-w-7xl mx-auto px-6">
-        <!-- Calendly inline widget begin -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/delvir/consulta?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        <!-- Calendly inline widget end -->
+      <div class="max-w-7xl mx-auto px-6 flex justify-center">
+        <button
+          type="button"
+          data-cal-link="agenda-delvir/30min"
+          data-cal-namespace="30min"
+          data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"dark"}'
+          class="h-14 px-10 rounded-full bg-[#6C6BFF] hover:bg-[#5757E6] text-white text-base font-medium transition-all duration-300 shadow-[0_6px_16px_0px_rgba(20,21,26,0.08)] hover:shadow-[0_10px_28px_0px_rgba(20,21,26,0.15)] hover:-translate-y-0.5 inline-flex items-center justify-center gap-2"
+        >
+          Ver horarios disponibles
+          <iconify-icon icon="solar:calendar-linear" width="22" height="22"></iconify-icon>
+        </button>
       </div>
     </section>
+
+    <!-- Cal element-click embed code begins -->
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "30min", {origin:"https://app.cal.com"});
+
+      Cal.ns["30min"]("ui", {"theme":"dark","hideEventTypeDetails":true,"layout":"month_view"});
+    </script>
+    <!-- Cal element-click embed code ends -->
   </main>
 
   <!-- Footer -->
